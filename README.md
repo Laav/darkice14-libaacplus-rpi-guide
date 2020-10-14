@@ -3,7 +3,7 @@ Steps to get Darkice 1.4 compiled with libaacplus support on a Raspberry PI 4
 
 ## Install latest updates for the OS
 
-```sudo apt-get update```
+```$ sudo apt-get update```
 
 ```$ sudo apt-get upgrade```
 
