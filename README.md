@@ -71,6 +71,36 @@ Remove all appearances of the word "inline" in frontend/au_channel.h, or use the
 
 ```$ sudo nano /etc/darkice.cfg```
 
+### Make Darkice 1.4 auto start with Raspberry PI boot and use Supervisor for start-stop via web.
+
+```$ sudo apt-get install supervisor```
+
+```$ cd /home/pi/```
+
+```$ mkdir config && cd config```
+
+```$ mkdir supervisor && cd supervisor```
+
+```$ wget https://raw.githubusercontent.com/LyonelB/Graffiti/master/darkice-supervisor/darkice.conf```
+
+```$ cd```
+
+```$ sudo ln -s /home/pi/config/supervisor/darkice.conf /etc/supervisor/conf.d/darkice.conf```
+
+#### Edit Supervisor with portnumber and credentials
+```$ sudo nano /etc/supervisor/supervisord.conf```
+
+```
+[inet_http_server]
+port = 9300
+username = user ; Auth username
+password = pass ; Auth password
+
+[eventlistener:supermail]
+command=python /usr/local/bin/supermail.py -a -m mail@domain.com -o "[DARKICE]"
+events=PROCESS_STATE
+```
+
 ## Sources
 Thanks for the support and knowledge to get Darkice 1.4 running on an Raspberry PI 4.
 
@@ -81,5 +111,6 @@ https://lyonelb.github.io/Darkice-All-codecs-RPi/
 
 https://github.com/coreyk/darkice-libaacplus-rpi-guide/issues/1
 
-https://github.com/rafael2k/darkice/issues/153```
+https://github.com/rafael2k/darkice/issues/153
+```
 
