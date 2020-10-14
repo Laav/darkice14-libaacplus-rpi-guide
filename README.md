@@ -2,6 +2,7 @@
 Steps to get Darkice 1.4 compiled with libaacplus support on a Raspberry PI 4
 
 ## Install latest updates for the OS
+
 ```sudo apt-get update```
 
 ```$ sudo apt-get upgrade```
@@ -10,6 +11,7 @@ Steps to get Darkice 1.4 compiled with libaacplus support on a Raspberry PI 4
 
 ### Install libfaac from source
 Change the filenames in third step to downloaded ones (latest version available)
+
 ``` mkdir /tmp/build && cd /tmp/build```
 
 ```$ apt-get -b source libfaac0 faac```
@@ -19,6 +21,7 @@ Change the filenames in third step to downloaded ones (latest version available)
 ```$ cd<```
 
 ### Download libaacplus from tipok.org.ua
+
 ```$ mkdir src && cd src```
 
 ```>$ wget http://tipok.org.ua/downloads/media/aacplus/libaacplus/libaacplus-2.0.2.tar.gz```
@@ -29,7 +32,7 @@ Change the filenames in third step to downloaded ones (latest version available)
 
 ```$ ./autogen.sh --host=arm-unknown-linux-gnueabi --enable-static --enable-shared```
 
-#### Edit (and backup) frontend/au_channel.h file to get compilation works again
+#### Edit (and backup) frontend/au_channel.h file, otherwise compiling will fail! 
 Remove all appearances of the word "inline" in frontend/au_channel.h, or use the edited one from pastebin.
 
 ```$ cd frontend/```
