@@ -24,7 +24,7 @@ Change the filenames in third step to downloaded ones (latest version available)
 
 ```$ mkdir src && cd src```
 
-```>$ wget http://tipok.org.ua/downloads/media/aacplus/libaacplus/libaacplus-2.0.2.tar.gz```
+```$ wget http://tipok.org.ua/downloads/media/aacplus/libaacplus/libaacplus-2.0.2.tar.gz```
 
 ```$ tar -xzf libaacplus-2.0.2.tar.gz```
 
