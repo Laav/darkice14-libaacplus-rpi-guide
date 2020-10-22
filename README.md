@@ -67,6 +67,8 @@ Remove all appearances of the word "inline" in frontend/au_channel.h, or use the
 
 ```$ tar -xzf darkice-1.4.tar.gz```
 
+```$ cd darkice-1.4/```
+
 ```$ ./configure --with-faac --with-faac-prefix=/usr/lib/arm-linux-gnueabihf --with-opus --with-pulseaudio --with-lame --with-lame-prefix=/usr/lib/arm-linux-gnueabihf --with-alsa --with-jack --with-aacplus --with-samplerate --with-vorbis```
 
 ```$ make```
