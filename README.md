@@ -49,6 +49,8 @@ Remove all appearances of the word "inline" in frontend/au_channel.h, or use the
 
 ### Compile libaacplus
 
+```$ cd ..```
+
 ```$ make```
 
 ```$ sudo make install```
