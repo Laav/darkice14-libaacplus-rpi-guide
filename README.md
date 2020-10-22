@@ -105,10 +105,6 @@ Remove all appearances of the word "inline" in frontend/au_channel.h, or use the
 port = 9300
 username = user ; Auth username
 password = pass ; Auth password
-
-[eventlistener:supermail]
-command=python /usr/local/bin/supermail.py -a -m mail@domain.com -o "[DARKICE]"
-events=PROCESS_STATE
 ```
 
 ## Sources
