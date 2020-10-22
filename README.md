@@ -120,5 +120,7 @@ https://github.com/coreyk/darkice-libaacplus-rpi-guide/issues/1
 https://github.com/rafael2k/darkice/issues/153
 
 https://github.com/LyonelB/Darkice-All-codecs-RPi
+
+https://github.com/rafael2k/darkice
 ```
 
