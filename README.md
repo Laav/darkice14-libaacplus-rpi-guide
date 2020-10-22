@@ -3,6 +3,9 @@ Steps to get Darkice 1.4 compiled with libaacplus support on a Raspberry PI 4
 
 ## Install latest updates for the OS
 
+Remove the # symbol before de db-src line (3) in sources.list
+```$ sudo nano /etc/apt/sources.list```
+
 ```$ sudo apt-get update```
 
 ```$ sudo apt-get upgrade```
@@ -10,15 +13,17 @@ Steps to get Darkice 1.4 compiled with libaacplus support on a Raspberry PI 4
 ```$ sudo apt-get install dh-autoreconf libtool libtool-bin libasound2-dev libfftw3-dev build-essential devscripts autotools-dev fakeroot dpkg-dev debhelper autotools-dev dh-make quilt ccache libsamplerate0-dev libpulse-dev libaudio-dev lame libjack-jackd2-dev libasound2-dev libtwolame-dev libfaad-dev libflac-dev libmp4v2-dev libshout3-dev libmp3lame-dev libopus-dev wget```
 
 ### Install libfaac from source
-Change the filenames in third step to downloaded ones (latest version available)
+Change the filenames used in "sudo dpkg" to you're local (downloaded) files
 
 ``` mkdir /tmp/build && cd /tmp/build```
 
 ```$ apt-get -b source libfaac0 faac```
 
-```$ sudo dpkg -i libfaac0_1.29.9.2-2_armhf.deb  libfaac-dev_1.29.9.2-2_armhf.deb faac_1.29.9.2-2_armhf.deb```
+```ls```
 
-```$ cd<```
+```$ sudo dpkg -i libfaac0_1.29.9.2-2_armhf.deb libfaac-dev_1.29.9.2-2_armhf.deb faac_1.29.9.2-2_armhf.deb```
+
+```$ cd```
 
 ### Download libaacplus from tipok.org.ua
 
@@ -33,13 +38,13 @@ Change the filenames in third step to downloaded ones (latest version available)
 ```$ ./autogen.sh --host=arm-unknown-linux-gnueabi --enable-static --enable-shared```
 
 #### Edit (and backup) frontend/au_channel.h file, otherwise compiling will fail! 
-Remove all appearances of the word "inline" in frontend/au_channel.h, or use the edited one from pastebin.
+Remove all appearances of the word "inline" in frontend/au_channel.h, or use the edited one from Github.
 
 ```$ cd frontend/```
 
 ```$ sudo cp au_channel.h au_channel.h-org```
 
-```$ wget -O au_channel.h https://pastebin.com/raw/w7s6c021```
+```$ wget -O au_channel.h https://raw.githubusercontent.com/Laav/darkice14-libaacplus-rpi-guide/main/au_channel.h```
 
 ### Compile libaacplus
 
