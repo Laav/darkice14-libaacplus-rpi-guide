@@ -81,7 +81,7 @@ Remove all appearances of the word "inline" in frontend/au_channel.h, or use the
 
 ```$ sudo nano /etc/darkice.cfg```
 
-### Make Darkice 1.4 auto start with Raspberry PI boot and use Supervisor with built in web interface for even more easier/better process monitoring
+### Make Darkice 1.4 auto start with Raspberry PI boot (thanks LyonelB) and use Supervisor with built in web interface for even more easier/better process monitoring
 
 ```$ sudo apt-get install supervisor```
 
@@ -118,5 +118,7 @@ https://lyonelb.github.io/Darkice-All-codecs-RPi/
 https://github.com/coreyk/darkice-libaacplus-rpi-guide/issues/1
 
 https://github.com/rafael2k/darkice/issues/153
+
+https://github.com/LyonelB/Darkice-All-codecs-RPi
 ```
 
