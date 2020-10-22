@@ -4,6 +4,7 @@ Steps to get Darkice 1.4 compiled with libaacplus support on a Raspberry PI 4
 ## Install latest updates for the OS
 
 Remove the # symbol before de db-src line (3) in sources.list
+
 ```$ sudo nano /etc/apt/sources.list```
 
 ```$ sudo apt-get update```
