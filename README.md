@@ -1,5 +1,5 @@
 # darkice14-libaacplus-rpi-guide
-Steps to get Darkice 1.4 compiled with libaacplus support on a Raspberry PI 4
+A step by step guide to get Darkice 1.4 compiled with libaacplus (aac & mp3) support on a Raspberry PI 4 (4Gb) running Raspberry Pi OS (32-bit) Lite.
 
 ## Install latest updates for the OS
 
@@ -81,7 +81,7 @@ Remove all appearances of the word "inline" in frontend/au_channel.h, or use the
 
 ```$ sudo nano /etc/darkice.cfg```
 
-### Make Darkice 1.4 auto start with Raspberry PI boot and use Supervisor for start-stop via web.
+### Make Darkice 1.4 auto start with Raspberry PI boot and use Supervisor with built in web interface for even more easier/better process monitoring
 
 ```$ sudo apt-get install supervisor```
 
@@ -97,12 +97,12 @@ Remove all appearances of the word "inline" in frontend/au_channel.h, or use the
 
 ```$ sudo ln -s /home/pi/config/supervisor/darkice.conf /etc/supervisor/conf.d/darkice.conf```
 
-#### Edit Supervisor with portnumber and credentials
+#### Edit Supervisor credentials and optional portnumber.
 ```$ sudo nano /etc/supervisor/supervisord.conf```
 
 ```
 [inet_http_server]
-port = 9300
+port = 3773 ; portnumber (ex: http://raspberrypi:3773
 username = user ; Auth username
 password = pass ; Auth password
 ```
