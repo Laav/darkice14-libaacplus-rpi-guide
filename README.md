@@ -1,15 +1,15 @@
 # darkice14-libaacplus-rpi-guide
-A step by step guide to get Darkice 1.4 compiled with libaacplus (aac & mp3) support on a Raspberry PI 4 (4Gb) running Raspberry Pi OS (32-bit) Lite.
+A step by step guide/tutorial to get Darkice Release v1.4 (03-01-2020) compiled with libaacplus (aac & mp3) support on a Raspberry PI 4 (4Gb) running Raspberry Pi OS (32-bit) Lite.
 
-## Install latest updates for the OS
+## Install latest updates for the OS via APT, I assume you allraedy installed Raspberry Pi OS.
 
 Remove the # symbol before de db-src line (3) in sources.list
 
 ```$ sudo nano /etc/apt/sources.list```
 
-```$ sudo apt-get update```
+```$ sudo apt update```
 
-```$ sudo apt-get upgrade```
+```$ sudo apt upgrade```
 
 ```$ sudo apt-get install dh-autoreconf libtool libtool-bin libasound2-dev libfftw3-dev build-essential devscripts autotools-dev fakeroot dpkg-dev debhelper autotools-dev dh-make quilt ccache libsamplerate0-dev libpulse-dev libaudio-dev lame libjack-jackd2-dev libasound2-dev libtwolame-dev libfaad-dev libflac-dev libmp4v2-dev libshout3-dev libmp3lame-dev libopus-dev wget```
 
@@ -102,7 +102,7 @@ Remove all appearances of the word "inline" in frontend/au_channel.h, or use the
 
 ```
 [inet_http_server]
-port = 3773 ; portnumber (ex: http://raspberrypi:3773
+port = 3773 ; portnumber (You can find the page at: http://raspberrypi:3773)
 username = user ; Auth username
 password = pass ; Auth password
 ```
